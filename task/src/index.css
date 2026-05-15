@@ -1,0 +1,209 @@
+/* index.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Fredoka", sans-serif;
+  background: #b9b88d;
+}
+
+/* APP */
+
+.app {
+  min-height: 100vh;
+  background: #b9b88d;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+}
+
+/* CONTAINER */
+
+.container {
+  width: 100%;
+  max-width: 900px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* HEADER */
+
+.header {
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  background: #b8ce7a;
+
+  border: 5px solid #1f1f1f;
+  border-radius: 22px;
+
+  padding: 15px 45px;
+
+  font-size: 52px;
+  font-weight: 700;
+
+  color: black;
+
+  letter-spacing: 2px;
+}
+
+/* INPUT */
+
+.input-section {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  gap: 15px;
+
+  margin-bottom: 35px;
+}
+
+.input-section input {
+  width: 70%;
+  height: 72px;
+
+  border: 5px solid #1f1f1f;
+  border-radius: 22px;
+
+  background: #f4f4f4;
+
+  padding: 0 20px;
+
+  outline: none;
+
+  font-size: 28px;
+  font-family: "Fredoka", sans-serif;
+  font-weight: 600;
+}
+
+.input-section input::placeholder {
+  color: #222;
+}
+
+.input-section button {
+  width: 150px;
+
+  border: none;
+  border-radius: 22px;
+
+  background: #5d8b2f;
+  color: white;
+
+  font-size: 32px;
+  font-family: "Fredoka", sans-serif;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.input-section button:hover {
+  transform: scale(1.03);
+}
+
+/* TASK WRAPPER */
+
+.tasks-wrapper {
+  position: relative;
+
+  width: 600px;
+  height: 420px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* BACKGROUND IMAGE */
+
+.bg-icon {
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  object-fit: contain;
+
+  opacity: 0.35;
+}
+
+/* TASK BOX */
+
+.tasks {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  height: 100%;
+
+  border: 3px solid #1f1f1f;
+
+  padding: 25px;
+
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+/* TASK */
+
+.task-card {
+  color: rgb(0, 0, 0);
+
+  font-size: 30px;
+  font-weight: 700;
+
+  text-align: center;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 28px;
+    padding: 12px 20px;
+  }
+
+  .input-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .input-section input {
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .input-section button {
+    width: 100%;
+    height: 65px;
+    font-size: 24px;
+  }
+
+  .tasks-wrapper {
+    width: 100%;
+    height: 350px;
+  }
+
+  .task-card {
+    font-size: 16px;
+  }
+}
